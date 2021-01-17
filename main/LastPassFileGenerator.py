@@ -58,7 +58,7 @@ if __name__ == '__main__':
     parser.add_argument('-i', '--input', required=True, dest='filename', type=argparse.FileType('r'),
                         help='absolute path to enpass exported json file')
 
-    args = parser.parse_args(" -i /Users/yadhukrishnap/Test/enpass_json_to_lastpass_csv/test/fixture/sample.json".split())
+    args = parser.parse_args(" -i ../test/fixture/sample.json".split())
     logging.info(f"input file of {args.filename.name} entered as enpass exported json")
     generateLastPassCSV(args.filename)
 
